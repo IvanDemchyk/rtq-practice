@@ -9,7 +9,7 @@ import { selectFilter } from "../../redux/filterSlice";
 export const Comments = () => {
   const { data: comments } = useGetCommentsQuery();
   const filter = useSelector(selectFilter);
-  console.log(filter);
+
   const filterComments = () => {
     return comments.filter(({ content }) =>
       content.toLowerCase().includes(filter.toLowerCase())
